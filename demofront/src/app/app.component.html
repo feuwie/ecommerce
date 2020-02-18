@@ -284,8 +284,41 @@
       visibility: hidden;
     }
   }
-
 </style>
 
 
-<button (click)="getItems()" class="btn btn-primary btn-block btn-lg">Нажми меня</button>
+<div style="border: 1px solid black; text-align: center; padding: 20px; margin: 40px">
+  <label>Имя</label>
+  <input class="form-control" name="username" [(ngModel)]="user.name" />
+  <label>Возраст</label>
+  <input class="form-control" type="number" name="age" [(ngModel)]="user.age" />
+  <button class="btn btn-primary" (click)="add(user)">Добавить</button>
+</div>
+
+<div style="border: 1px solid black; text-align: center; padding: 20px; margin: 40px">
+  <label>Id</label>
+  <input class="form-control" type="number" name="id" [(ngModel)]="user.id" />
+  <button class="btn btn-primary" (click)="del(user)">Удалить</button>
+</div>
+
+<div style="border: 1px solid black; text-align: center; padding: 20px; margin: 40px">
+  <label>Id</label>
+  <input class="form-control" type="number" name="id" [(ngModel)]="user.id" />
+  <label>Имя</label>
+  <input class="form-control" name="username" [(ngModel)]="user.name" />
+  <label>Возраст</label>
+  <input class="form-control" type="number" name="age" [(ngModel)]="user.age" />
+  <button class="btn btn-primary" (click)="upd(user)">Обновить</button>
+</div>
+
+<div style="border: 1px solid black; text-align: center; padding: 20px; margin: 40px">
+  <label>Id</label>
+  <input class="form-control" type="number" name="id" [(ngModel)]="user.id" />
+  <button class="btn btn-primary" (click)="listOne(user)">Вывести юзера</button>
+  <pre>{{receivedUser | json}}</pre>
+</div>
+
+<div style="border: 1px solid black; text-align: center; padding: 20px; margin: 40px">
+<button class="btn btn-primary" (click)="listAll()">Вывести всех</button>
+<pre>{{receivedUserAll | json}}</pre>
+</div>

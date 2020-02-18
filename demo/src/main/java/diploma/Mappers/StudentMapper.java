@@ -1,8 +1,10 @@
-package com.example.demo.testing;
+package diploma.Mappers;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
+
+import diploma.Model.Student;
 
 public class StudentMapper implements RowMapper<Student> {
    public Student mapRow(ResultSet rs, int rowNum) throws SQLException {
